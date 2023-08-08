@@ -4,9 +4,26 @@
 
 //Utilities
 @import "./utilities/animation";
+@import "./utilities/spacing";
 
 // Components
 @import "./components/buttons";
 
 // Layouts
 @import "./layouts/header";
+
+//Pages
+@import "./pages/home";
+
+//Badges
+@import "./components/badges";
+
+//BG Elements
+@import "./layouts/bg_elements";
+
+
+
+
+.mt-5{
+    margin-top: 5rem;
+}

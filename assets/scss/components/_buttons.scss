@@ -6,11 +6,13 @@
     border-radius: 6px;
     line-height: 1;
     font-size: 0.9rem;
+    font-weight: 600;
     border: none;
     outline: none;
-    font-weight: 600;
+    cursor: pointer;
 
     &-primary{
+        @extend .btn;
         background-color: func.theme-colors();
         color: white;
 
@@ -18,4 +20,18 @@
             background-color: func.theme-colors("primary-hover");
         }
     }
+
+    &-primary-outline{
+        @extend .btn;
+        background-color: #fff;
+        border: 2px solid func.theme-colors();
+        color: func.theme-colors();
+
+        &:hover{
+            background-color: func.theme-colors();
+            color: #fff;
+            transition: 200ms;
+        }
+    }
 }
+
