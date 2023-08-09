@@ -23,6 +23,14 @@ a {
   animation: color-change 5s infinite;
 }
 
+.line {
+  background: linear-gradient(to right, #e24997, #2d2ed4);
+  width: 7rem;
+  height: 0.5rem;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
 @keyframes color-change {
   0% {
     color: red;
@@ -41,6 +49,14 @@ a {
   }
 }
 @keyframes box-shape {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-infinite {
   0% {
     transform: rotate(0deg);
   }
@@ -788,6 +804,94 @@ a {
   color: #cfcfcf;
 }
 
+.roadmap {
+  padding: 8rem 20rem;
+}
+.roadmap-heading {
+  text-align: center;
+}
+.roadmap-heading h2 {
+  font-size: 2rem;
+}
+.roadmap-heading p {
+  color: gray;
+}
+.roadmap-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.roadmap-item {
+  transition: 1000ms;
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 350px;
+  position: relative;
+  cursor: pointer;
+  filter: grayscale(100%);
+  margin-left: 3rem;
+}
+.roadmap-item:hover .roadmap-item-img::after {
+  animation: rotate-infinite 4000ms linear infinite;
+}
+.roadmap-item-img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+}
+.roadmap-item-img img {
+  width: 60px;
+  margin-top: 25px;
+}
+.roadmap-item-img::after {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  border: 5px dotted #3f43fd;
+  content: "";
+  border-radius: 50%;
+}
+.roadmap-item-contents {
+  margin-top: 2rem;
+}
+.roadmap-item-contents h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.roadmap-item-contents p {
+  color: gray;
+  line-height: 1.5;
+}
+.roadmap-item:not(:last-child)::before {
+  position: absolute;
+  top: 35%;
+  right: -20%;
+  width: 70px;
+  height: 70px;
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 3rem;
+  color: #020702;
+  z-index: 1;
+  line-height: 1;
+  transition: 500ms;
+}
+.roadmap-item:hover:not(:last-child)::before {
+  right: -25%;
+  color: #3f43fd;
+}
+.roadmap-item:hover h5 {
+  color: #3f43fd;
+}
+.roadmap-item:hover {
+  filter: grayscale(0);
+}
+
 .badge {
   padding: 0px 10px;
 }
@@ -929,10 +1033,6 @@ a {
   z-index: -1;
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
-}
-
-.mt-5 {
-  margin-top: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
