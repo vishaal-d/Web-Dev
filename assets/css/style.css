@@ -749,7 +749,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 .header-menu {
   display: flex;
@@ -768,6 +768,35 @@ a {
 }
 .header-menu-item > a.active {
   color: #3f43fd;
+}
+
+footer {
+  padding: 2rem 0;
+  background-color: #3f43fd;
+  color: white;
+  text-align: center;
+}
+footer p {
+  color: #e8e8e8;
+}
+footer a {
+  color: white;
+}
+footer a:hover {
+  text-shadow: 2px 2px 10px #000;
+}
+footer .social-icons > a > i {
+  transition: 500ms;
+  font-size: 1.5rem;
+  padding: 0 10px;
+  color: #1619a0;
+}
+footer .social-icons > a > i:hover {
+  color: rgb(225, 225, 225);
+}
+footer .leagal {
+  font-size: 0.9rem;
+  color: #e8e8e8;
 }
 
 .hero-area {
@@ -973,6 +1002,7 @@ a {
   align-items: center;
   padding: 2rem 3rem;
   border-radius: 0.5rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 .contact-card-form {
   flex-grow: 1;
