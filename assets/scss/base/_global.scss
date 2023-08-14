@@ -13,10 +13,20 @@
     animation: color-change 5s infinite;
 }
 
+.opa-anim{
+    transition: 200ms;
+    animation: opacity-change 5s ease-out infinite;
+}
+
 .line{
     background: linear-gradient(to right, #e24997,#2d2ed4);
     width: 7rem;
     height: 0.5rem;
     border-radius: 10px;
     margin:20px auto;
+}
+
+.img-responsive{
+    max-width: 100%;
+    height: auto;
 }

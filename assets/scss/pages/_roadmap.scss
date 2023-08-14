@@ -1,19 +1,32 @@
 @use "../abstract/variable" as var;
 @use "../abstract/functions" as func;
+@use "../abstract/mixsins.scss" as mixins;
 
 
 .roadmap{
     padding: 8rem 20rem;
+
+    @include mixins.responsive(xs){
+        padding: 4rem 2rem;
+    }
 
     &-heading {
         text-align: center;
 
         h2{
             font-size: 2rem;
+
+            @include mixins.responsive(xs){
+                font-size: 1.5rem;
+            }
         }
 
         p{
             color: gray;
+
+            @include mixins.responsive(xs){
+                font-size: 0.8rem;
+            }
         }
     }
 
@@ -22,6 +35,10 @@
         justify-content: center;
         align-items: center;
         margin-top: 3rem;
+
+        @include mixins.responsive(xs){
+            flex-direction: column;
+        }
     }
 
     &-item{
@@ -92,6 +109,12 @@
             z-index: 1;
             line-height: 1;
             transition: 500ms;
+
+            @include mixins.responsive(xs){
+                content: "\f107";
+                top: 90%;
+                left: 35%;
+            }
         }
 
         &:hover:not(:last-child)::before{

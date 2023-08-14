@@ -1,11 +1,13 @@
+@use "../abstract/mixsins.scss" as mixins;
+
 .contact{
     padding: 8rem 20rem;
     background-color: rgb(225, 225, 225);
 
-    &-img img{
-        height: 500px;
-        padding: 10px;
+    @include mixins.responsive(xs){
+        padding: 4rem 2rem;
     }
+
 
     &-card{
 
@@ -17,15 +19,29 @@
         border-radius: 0.5rem;
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
+        @include mixins.responsive(xs){
+            flex-direction: column;
+            padding: 2rem;
+            align-items: initial;
+        }
+
         &-form{
             flex-grow: 1;
 
             h4{
                 font-size: 1.2rem;
+
+                @include mixins.responsive(xs){
+                    font-size: 1rem;
+                }
             }
     
             p{
                 color: gray;
+
+                @include mixins.responsive(xs){
+                    font-size: 0.8rem;
+                }
             }
         }
     }

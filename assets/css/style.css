@@ -23,12 +23,22 @@ a {
   animation: color-change 5s infinite;
 }
 
+.opa-anim {
+  transition: 200ms;
+  animation: opacity-change 5s ease-out infinite;
+}
+
 .line {
   background: linear-gradient(to right, #e24997, #2d2ed4);
   width: 7rem;
   height: 0.5rem;
   border-radius: 10px;
   margin: 20px auto;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
 }
 
 @keyframes color-change {
@@ -751,10 +761,34 @@ a {
   align-items: center;
   border-bottom: 2px solid #eee;
 }
+@media only screen and (max-width: 576px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header h2 > span {
+    font-size: 1.5rem;
+  }
+}
+.header .nav-toogler {
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .header .nav-toogler {
+    font-size: 1.3rem;
+    display: contents;
+  }
+}
 .header-menu {
   display: flex;
   list-style: none;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 576px) {
+  .header-menu {
+    display: none;
+  }
 }
 .header-menu-item > a {
   margin-right: 1.5rem;
@@ -776,8 +810,18 @@ footer {
   color: white;
   text-align: center;
 }
+@media only screen and (max-width: 576px) {
+  footer h2 {
+    font-size: 1.2rem;
+  }
+}
 footer p {
   color: #e8e8e8;
+}
+@media only screen and (max-width: 576px) {
+  footer p {
+    font-size: 0.7rem;
+  }
 }
 footer a {
   color: white;
@@ -805,18 +849,38 @@ footer .leagal {
   justify-content: space-around;
   align-items: center;
 }
+@media only screen and (max-width: 576px) {
+  .hero-area {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+}
 .hero-area-contents {
   max-width: 34rem;
 }
 .hero-area-title {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 600;
+}
+@media only screen and (max-width: 576px) {
+  .hero-area-title {
+    font-size: 2rem;
+  }
+  .hero-area-title > span {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 }
 .hero-area-desc {
   font-size: 1.2rem;
   margin-top: 2rem;
   line-height: 1.8;
   color: gray;
+}
+@media only screen and (max-width: 576px) {
+  .hero-area-desc {
+    font-size: 0.9rem;
+  }
 }
 .hero-area-img {
   width: 500px;
@@ -831,22 +895,54 @@ footer .leagal {
   align-items: center;
   margin-top: 11rem;
 }
+@media only screen and (max-width: 576px) {
+  .about-area {
+    padding: 4rem 2rem;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
 .about-area-img {
   width: 32rem;
+}
+@media only screen and (max-width: 576px) {
+  .about-area-img {
+    margin-left: 2rem;
+  }
 }
 .about-area-contents {
   color: #fff;
 }
+@media only screen and (max-width: 576px) {
+  .about-area-contents {
+    margin: 0;
+  }
+}
 .about-area-contents h2 {
   font-size: 3rem;
+}
+@media only screen and (max-width: 576px) {
+  .about-area-contents h2 {
+    font-size: 1.5rem;
+  }
 }
 .about-area-contents p {
   line-height: 2;
   color: #cfcfcf;
 }
+@media only screen and (max-width: 576px) {
+  .about-area-contents p {
+    font-size: 0.9rem;
+  }
+}
 
 .roadmap {
   padding: 8rem 20rem;
+}
+@media only screen and (max-width: 576px) {
+  .roadmap {
+    padding: 4rem 2rem;
+  }
 }
 .roadmap-heading {
   text-align: center;
@@ -854,14 +950,29 @@ footer .leagal {
 .roadmap-heading h2 {
   font-size: 2rem;
 }
+@media only screen and (max-width: 576px) {
+  .roadmap-heading h2 {
+    font-size: 1.5rem;
+  }
+}
 .roadmap-heading p {
   color: gray;
+}
+@media only screen and (max-width: 576px) {
+  .roadmap-heading p {
+    font-size: 0.8rem;
+  }
 }
 .roadmap-items {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+}
+@media only screen and (max-width: 576px) {
+  .roadmap-items {
+    flex-direction: column;
+  }
 }
 .roadmap-item {
   transition: 1000ms;
@@ -922,6 +1033,13 @@ footer .leagal {
   line-height: 1;
   transition: 500ms;
 }
+@media only screen and (max-width: 576px) {
+  .roadmap-item:not(:last-child)::before {
+    content: "\f107";
+    top: 90%;
+    left: 35%;
+  }
+}
 .roadmap-item:hover:not(:last-child)::before {
   right: -25%;
   color: #3f43fd;
@@ -937,6 +1055,11 @@ footer .leagal {
   padding: 8rem 20rem;
   background-color: #3f43fd;
 }
+@media only screen and (max-width: 576px) {
+  .courses {
+    padding: 4rem 2rem;
+  }
+}
 .courses-heading {
   text-align: center;
 }
@@ -944,12 +1067,27 @@ footer .leagal {
   font-size: 2rem;
   color: white;
 }
+@media only screen and (max-width: 576px) {
+  .courses-heading h2 {
+    font-size: 1.5rem;
+  }
+}
 .courses-heading p {
   color: rgb(223, 223, 223);
+}
+@media only screen and (max-width: 576px) {
+  .courses-heading p {
+    font-size: 0.9rem;
+  }
 }
 .courses-cards {
   display: flex;
   justify-content: space-between;
+}
+@media only screen and (max-width: 576px) {
+  .courses-cards {
+    flex-direction: column;
+  }
 }
 .courses-card {
   background-color: #fff;
@@ -991,9 +1129,10 @@ footer .leagal {
   padding: 8rem 20rem;
   background-color: rgb(225, 225, 225);
 }
-.contact-img img {
-  height: 500px;
-  padding: 10px;
+@media only screen and (max-width: 576px) {
+  .contact {
+    padding: 4rem 2rem;
+  }
 }
 .contact-card {
   display: flex;
@@ -1004,14 +1143,31 @@ footer .leagal {
   border-radius: 0.5rem;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
+@media only screen and (max-width: 576px) {
+  .contact-card {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: initial;
+  }
+}
 .contact-card-form {
   flex-grow: 1;
 }
 .contact-card-form h4 {
   font-size: 1.2rem;
 }
+@media only screen and (max-width: 576px) {
+  .contact-card-form h4 {
+    font-size: 1rem;
+  }
+}
 .contact-card-form p {
   color: gray;
+}
+@media only screen and (max-width: 576px) {
+  .contact-card-form p {
+    font-size: 0.8rem;
+  }
 }
 
 .resize-x {
@@ -1027,6 +1183,11 @@ footer .leagal {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 576px) {
+  .background-shapes {
+    display: none;
+  }
+}
 .background-shapes .box1 {
   position: absolute;
   top: 20%;
