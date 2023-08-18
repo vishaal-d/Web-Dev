@@ -13,6 +13,10 @@
         padding: 1rem 2rem;
     }
 
+    @include mixins.responsive(sm) {
+        padding: 1rem 2rem;
+    }
+
     h2 > span{
         @include mixins.responsive(xs) {
             font-size: 1.5rem;
@@ -25,6 +29,11 @@
             font-size: 1.3rem;
             display: contents;
         }
+
+        @include mixins.responsive(sm) {
+            font-size: 1.3rem;
+            display: contents;
+        }
     }
     
     &-menu{
@@ -33,6 +42,10 @@
         text-transform: uppercase;
 
         @include mixins.responsive(xs){
+            display: none;
+        }
+
+        @include mixins.responsive(sm){
             display: none;
         }
         

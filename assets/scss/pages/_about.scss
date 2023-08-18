@@ -15,10 +15,21 @@
         margin-top: 0;
     }
 
+    @include mixins.responsive(sm){
+        padding: 4rem 2rem;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
     &-img {
         width: 32rem;
 
         @include mixins.responsive(xs){
+            margin-left: 2rem;
+        }
+
+        @include mixins.responsive(sm){
+            width: 23rem;
             margin-left: 2rem;
         }
     }
@@ -37,6 +48,10 @@
                 font-size: 1.5rem;
             }
 
+            @include mixins.responsive(sm){
+                font-size: 2rem;
+            }
+
         }
 
         p{
@@ -44,6 +59,10 @@
             color: #cfcfcf;
 
             @include mixins.responsive(xs){
+                font-size: 0.9rem;
+            }
+
+            @include mixins.responsive(sm){
                 font-size: 0.9rem;
             }
         }

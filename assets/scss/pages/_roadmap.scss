@@ -10,6 +10,12 @@
         padding: 4rem 2rem;
     }
 
+    @include mixins.responsive(sm){
+        padding: 4rem 2rem;
+    }
+
+    
+
     &-heading {
         text-align: center;
 
@@ -39,6 +45,11 @@
         @include mixins.responsive(xs){
             flex-direction: column;
         }
+
+        @include mixins.responsive(sm){
+            flex-direction: column;
+        }
+        
     }
 
     &-item{
@@ -114,6 +125,12 @@
                 content: "\f107";
                 top: 90%;
                 left: 35%;
+            }
+
+            @include mixins.responsive(sm){
+                content: "\f107";
+                top: 90%;
+                left: 40%;
             }
         }
 

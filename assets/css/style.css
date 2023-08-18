@@ -766,6 +766,11 @@ a {
     padding: 1rem 2rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
 @media only screen and (max-width: 576px) {
   .header h2 > span {
     font-size: 1.5rem;
@@ -780,12 +785,23 @@ a {
     display: contents;
   }
 }
+@media only screen and (min-width: 576px) {
+  .header .nav-toogler {
+    font-size: 1.3rem;
+    display: contents;
+  }
+}
 .header-menu {
   display: flex;
   list-style: none;
   text-transform: uppercase;
 }
 @media only screen and (max-width: 576px) {
+  .header-menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) {
   .header-menu {
     display: none;
   }
@@ -855,12 +871,32 @@ footer .leagal {
     padding: 4rem 2rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .hero-area {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .hero-area img {
+    width: 300px;
+  }
+}
 .hero-area-contents {
   max-width: 34rem;
 }
 .hero-area-title {
   font-size: 3rem;
   font-weight: 600;
+}
+@media only screen and (min-width: 576px) {
+  .hero-area-title {
+    font-size: 2.5rem;
+  }
+  .hero-area-title > span {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
 }
 @media only screen and (max-width: 576px) {
   .hero-area-title {
@@ -878,6 +914,11 @@ footer .leagal {
   color: gray;
 }
 @media only screen and (max-width: 576px) {
+  .hero-area-desc {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 576px) {
   .hero-area-desc {
     font-size: 0.9rem;
   }
@@ -902,11 +943,24 @@ footer .leagal {
     margin-top: 0;
   }
 }
+@media only screen and (min-width: 576px) {
+  .about-area {
+    padding: 4rem 2rem;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
 .about-area-img {
   width: 32rem;
 }
 @media only screen and (max-width: 576px) {
   .about-area-img {
+    margin-left: 2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .about-area-img {
+    width: 23rem;
     margin-left: 2rem;
   }
 }
@@ -926,6 +980,11 @@ footer .leagal {
     font-size: 1.5rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .about-area-contents h2 {
+    font-size: 2rem;
+  }
+}
 .about-area-contents p {
   line-height: 2;
   color: #cfcfcf;
@@ -935,11 +994,21 @@ footer .leagal {
     font-size: 0.9rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .about-area-contents p {
+    font-size: 0.9rem;
+  }
+}
 
 .roadmap {
   padding: 8rem 20rem;
 }
 @media only screen and (max-width: 576px) {
+  .roadmap {
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (min-width: 576px) {
   .roadmap {
     padding: 4rem 2rem;
   }
@@ -970,6 +1039,11 @@ footer .leagal {
   margin-top: 3rem;
 }
 @media only screen and (max-width: 576px) {
+  .roadmap-items {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 576px) {
   .roadmap-items {
     flex-direction: column;
   }
@@ -1040,6 +1114,13 @@ footer .leagal {
     left: 35%;
   }
 }
+@media only screen and (min-width: 576px) {
+  .roadmap-item:not(:last-child)::before {
+    content: "\f107";
+    top: 90%;
+    left: 40%;
+  }
+}
 .roadmap-item:hover:not(:last-child)::before {
   right: -25%;
   color: #3f43fd;
@@ -1060,6 +1141,11 @@ footer .leagal {
     padding: 4rem 2rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .courses {
+    padding: 4rem 2rem;
+  }
+}
 .courses-heading {
   text-align: center;
 }
@@ -1072,10 +1158,20 @@ footer .leagal {
     font-size: 1.5rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .courses-heading h2 {
+    font-size: 2rem;
+  }
+}
 .courses-heading p {
   color: rgb(223, 223, 223);
 }
 @media only screen and (max-width: 576px) {
+  .courses-heading p {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 576px) {
   .courses-heading p {
     font-size: 0.9rem;
   }
@@ -1087,6 +1183,12 @@ footer .leagal {
 @media only screen and (max-width: 576px) {
   .courses-cards {
     flex-direction: column;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .courses-cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
 .courses-card {
@@ -1134,6 +1236,11 @@ footer .leagal {
     padding: 4rem 2rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .contact {
+    padding: 4rem 2rem;
+  }
+}
 .contact-card {
   display: flex;
   background-color: white;
@@ -1144,6 +1251,13 @@ footer .leagal {
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 @media only screen and (max-width: 576px) {
+  .contact-card {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: initial;
+  }
+}
+@media only screen and (min-width: 576px) {
   .contact-card {
     flex-direction: column;
     padding: 2rem;
@@ -1161,12 +1275,22 @@ footer .leagal {
     font-size: 1rem;
   }
 }
+@media only screen and (min-width: 576px) {
+  .contact-card-form h4 {
+    font-size: 1.5rem;
+  }
+}
 .contact-card-form p {
   color: gray;
 }
 @media only screen and (max-width: 576px) {
   .contact-card-form p {
     font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .contact-card-form p {
+    font-size: 0.9rem;
   }
 }
 
@@ -1200,6 +1324,11 @@ footer .leagal {
   z-index: -1;
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
+}
+@media only screen and (min-width: 576px) {
+  .background-shapes .box1 {
+    top: 30%;
+  }
 }
 .background-shapes .box2 {
   position: absolute;
@@ -1251,6 +1380,12 @@ footer .leagal {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
+@media only screen and (min-width: 576px) {
+  .background-shapes .dot2 {
+    top: 35%;
+    left: 70%;
+  }
+}
 .background-shapes .dot3 {
   position: absolute;
   top: 90%;
@@ -1285,6 +1420,11 @@ footer .leagal {
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
 }
+@media only screen and (min-width: 576px) {
+  .background-shapes .heart1 {
+    left: 7%;
+  }
+}
 .background-shapes .heart2 {
   font-size: 1.5rem;
   position: absolute;
@@ -1298,7 +1438,7 @@ footer .leagal {
 .background-shapes .circle1 {
   position: absolute;
   top: 80%;
-  left: 21%;
+  left: 15%;
   width: 15px;
   height: 15px;
   background-color: transparent;
@@ -1320,6 +1460,11 @@ footer .leagal {
   z-index: -1;
   transform: rotate(360deg);
   animation: box-shape linear 5s infinite;
+}
+@media only screen and (min-width: 576px) {
+  .background-shapes .circle2 {
+    top: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
